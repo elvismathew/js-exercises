@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        const d = new Date("2024-04-2");
+
+        let day = days[d.getDay()];
+
+        document.getElementById("demo").innerHTML = "Today is :" + day +"</br>"+
+       "Current time is :" + d.getHours() +":"+  d.getMinutes() + ":"+ d.getSeconds();
+
+    </script>
+</body>
+</html>
