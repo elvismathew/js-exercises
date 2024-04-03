@@ -8,13 +8,21 @@
 <body>
     <p id="demo"></p>
     <script>
-        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-        const d = new Date("2024-04-2");
+    
+        const d = new Date( );
 
-        let day = days[d.getDay()];
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-        document.getElementById("demo").innerHTML = "Today is :" + day +"</br>"+
-       "Current time is :" + d.getHours() +":"+  d.getMinutes() + ":"+ d.getSeconds();
+        var day = days[d.getDay()];
+
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var seconds = d.getSeconds();
+
+        var  currentTimeString = hours + ":" + minutes + ":" + seconds;
+
+        document.getElementById("demo").innerHTML = "Today is :" + day +"</br>"+ "Current time is:" +
+       currentTimeString;
 
     </script>
 </body>

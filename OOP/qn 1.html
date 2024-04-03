@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        class person{
+            constructor(name, age, country){
+                this.name = name;
+                this.age = age;
+                this.country = country;
+            }
+        
+        }
+
+        const person1 = new person("elvis", "24", "Tanzania");
+        const person2 = new person("tindai", 24, "mexico");
+
+       document.getElementById("demo").innerHTML= "Person 1:" + "</br>" + "name:"+person1.name + "<br>" + "Age: " + person1.age + "<br>" + "Country: " + person1.country+ "<br>"
+       + "Person 2:" +"</br>"+ "name:"+person2.name + "<br>" + "Age: " + person2.age + "<br>" + "Country: " + person2.country;
+        </script>
+</body>
+</html>
