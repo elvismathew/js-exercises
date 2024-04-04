@@ -8,20 +8,30 @@
     <p id="demo"></p>
 
     <script>
-        class person{
-            constructor(name, age, country){
-                this.name = name;
-                this.age = age;
-                this.country = country;
-            }
-        
-        }
+       class Person {
+  constructor(name, age, country) {
+    this.name = name;
+    this.age = age;
+    this.country = country;
+  }
 
-        const person1 = new person("elvis", "24", "Tanzania");
-        const person2 = new person("tindai", 24, "mexico");
+  displayDetails(){
+    const detailsDiv= document.getElementById("demo");
+    const PersonDetailElement = document.createElement("div");
+    PersonDetailElement.textContent  = `Name: ${this.name}, Age:${this.age}, Country: ${this.country}`;
+    detailsDiv.appendChild(PersonDetailElement);
+  }
+  
+}
 
-       document.getElementById("demo").innerHTML= "Person 1:" + "</br>" + "name:"+person1.name + "<br>" + "Age: " + person1.age + "<br>" + "Country: " + person1.country+ "<br>"
-       + "Person 2:" +"</br>"+ "name:"+person2.name + "<br>" + "Age: " + person2.age + "<br>" + "Country: " + person2.country;
+// Create instances of the Person class
+const person1 = new Person("John", 30, "USA");
+const person2 = new Person("Emily", 25, "Canada");
+
+// Display details of the persons
+person1.displayDetails();
+person2.displayDetails();
+
         </script>
 </body>
 </html>
