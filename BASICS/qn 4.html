@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rotateStringRight(str){
+            let rotatedString = str;
+            setInterval(() =>{
+                //remove the last character
+                const lastChar = rotatedString.charAt(rotatedString.length-1);
+
+                //attach the last character to the front
+                rotatedString = lastChar + rotatedString.substring(0, rotatedString.length-1);
+                console.log(rotatedString);
+            },1000);
+        }
+
+        rotateStringRight("w3schools");
+    </script>
+</body>
+</html>
