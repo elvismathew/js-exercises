@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function daysUntilBirthday(){
+        //Get today's date
+        var today = new Date();
+        
+        //Get current year
+         var currrentYear = today.getFullYear();
+         
+         //calculate the date of the birth for the current year
+         var birthday = new Date(currrentYear, 4, 18);
+        
+        
+        //calculate the difference in millisecond between today and DOB
+        var timeDiff = birthday.getTime() - today.getTime();
+        
+        //convert millisecond into days
+        var daysleft = Math.ceil(timeDiff/(1000 * 3600 * 24))
+
+        return daysleft;
+    }
+
+    console.log(daysUntilBirthday() + " days remaining");
+     </script>
+</body>
+</html>
