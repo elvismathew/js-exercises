@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function compareObject(obj1, obj2){
+            const keys1 = Object.keys(obj1);
+            const keys2 = Object.keys(obj2);
+        
+
+        //Check if the length is the same
+        if(keys1.length != keys2.length){
+            return false;
+        }
+
+        for(let key of keys1){
+            if (obj1[key] != obj2[key]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+        const obj1 = {name: "John",age: 30};
+        const obj2 = {name:"John", age:30};
+        const obj3 = {name:"Paschal", age:20};
+
+        console.log(compareObject(obj1,obj2));
+        console.log(compareObject(obj1, obj3));
+
+    </script>
+</body>
+</html>
