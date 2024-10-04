@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form>
+    Enter temperature value in celsius : <input type="text" id="C_temp">
+    <input type="button" onclick="convert_CtoF()" value="Farenheit">
+    <br>
+    Enter temperature value in Farenheit: <input  type="text" id="F_temp">
+    <input type="button" onclick="convert_FtoC()" value="Celsius">
+    <p>The temperature in Celsius is: <br>
+        <span id="C_result"></span></p>
+
+    <p>The temperature in Farenheit is: <br>
+        <span id="F_result"></span>
+    </p>
+
+        <script>
+           function convert_CtoF (){
+            celsius_temp = document.getElementById("C_temp").value;
+            document.getElementById("C_result").innerHTML= (1.8*celsius_temp) + 32;
+           }
+
+           function convert_FtoC(){
+            farenheit_temp = document.getElementById("F_temp").value;
+            document.getElementById("F_result").innerHTML = (farenheit_temp - 32)*5/9;
+           }
+        </script>
+  </form>
+</body>
+</html>
